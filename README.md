@@ -1,5 +1,10 @@
 # North Spark - Adaptive Learning App for Autism
 
+A personalized app where kids on the spectrum
+create interest-based learning modules for
+cognitive, emotional, and social skills
+
+
 ## Course Information
 - **Course:** CSIS 3375 - UX Design in Web and Mobile App
 - **Section:** 001
