@@ -26,4 +26,4 @@ cognitive, emotional, and social skills
 | Name | Student ID | Email |
 |------|------------|-------|
 | Dundee Adriatico | 300393449 | adriaticom@student.douglascollege.ca |
-| Spencer Gosselin | 300XXXXXX | spencer.gosselin@icloud.com |
+| Spencer Gosselin | 300395410 | spencer.gosselin@icloud.com |
