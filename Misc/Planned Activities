@@ -1,27 +1,26 @@
-Today (Day 1 – planning)
-Create docs/weekly-plan.md (or similar) in the repo.
-Paste in the plan for the next 6 days (see below).
-
-Day 2 – README + goals
-Task: Improve README.md: 3–5 bullet points on what the prototype is, who it’s for, and main features.
-Commit: docs: clarify project goals in README.
-
-Day 3 – Requirements
-Task: Create or extend docs/requirements.md with 5–10 user stories or requirements. - done with with Requirements Document
-Commit: docs: add user requirements.
-
-Day 4 – Feature list & priorities
-Task: Make a simple feature list in docs/features.md and mark each as “MVP” or “later”.
-Commit: docs: list MVP and future features.
-
-Day 5 – Screens / flows sketch
-Task: Describe main screens and flows in docs/flows.md (Home, Detail, Settings, etc.; just bullets or a simple numbered flow).
-Commit: docs: outline core user flows.
-
-Day 6 – Data / models
-Task: Write basic data models in docs/models.md (e.g. what fields a “Task”, “User”, or “Item” has).
-Commit: docs: define core data models.
-
-Day 7 – Next‑week prep
-Task: Add docs/next-week-plan.md with 3–5 concrete tasks you’ll do next week (can start including code or design work).​
-Commit: docs: draft next week’s plan.
+Day	Focus area	What you design in Figma	Android / UX notes
+1	Splash screen	Splash frame at 360×800 with centered app icon/logo “North Spark” and calm background color; minimal loading indicator.	Follow Android splash guidance: single logo/brand image, no busy UI, icon sized within recommended dp bounds for adaptive icons.
+​
+2	Login / entry	Simple login / entry screen: app logo, “Sign in as Parent” primary button, “Continue as Child” secondary button, helper text about who should tap what.	For now, treat this as mock login (no real auth), but visually separate parent vs child paths to reduce confusion for kids.
+3	Child profile choice (optional)	If relevant, add a “Who’s playing?” screen with child avatars (e.g., first names + icons) that parent picks once.	Maps later to a simple child profile model; big tap targets, 44dp+ touch size following Material guidance.
+​
+4	Home frame baseline	Build the child home frame you already have: Status bar (24dp), App bar (56dp, “My Decks”), main scrollable deck list, bottom streak indicator.	Annotate these elements as StatusBar, AppBar, RecyclerView, StreakView so it reads like an Android layout diagram.
+​
+5	Deck card component	Refine the deck card component: 328dp wide, 100dp tall, image on left, title + subtitle text, Play button on right with clear affordance.	Explicitly label it “DeckViewHolder / item_deck.xml” in annotations to reinforce RecyclerView mapping.
+​
+​
+6	Deck card variants	Add variants: Default (Play), In Progress (Resume + progress text), Completed Today (checkmark, subtle gray), Locked (parent only).	These mirror different view states / binding cases in the adapter (e.g., status enum on the Deck model).
+​
+​
+7	Home empty/edge states	Design: “No decks yet” (empty state), “Today’s decks done” (celebration + streak emphasis), and “Offline / error” state.	Helps you handle edge cases before coding; these will become conditional branches in the home fragment/activity.
+8	Flashcard session type 1	Flesh out the flashcard session frame: large central card, two answer buttons, top progress (1/5), Break button, calm background.	Map this to a “SessionActivity/Fragment” with a ViewPager‑like feel, even if implemented as one fragment that swaps card content.
+9	More card types	Add 2–3 additional card layouts: three‑choice emotion, number/counting, map/sequence. Maintain consistent nav and Break placement.	These will correspond to different CardType values and conditionally inflated layouts in Android.
+10	Break & completion flows	Prototype: Break → break options frame or direct return to home with state (“Paused”, “Stopped early”), and a Completion screen with “Back to My Decks”.	Shows escape‑maintained behavior handling with safe exits; flows will become explicit navigation actions in code.
+11	Parent mini‑view	Simple parent screen reached from App bar (settings icon): list of decks with toggles (show/hide), daily target selector, compact streak summary.	This can later map to another Activity or Fragment, but for now it’s just to clarify what’s parent‑controlled vs child‑visible.
+​
+12	Prototype wiring	In Prototype tab: connect Splash → Login/Entry → Child Home → Deck Session → Break → Home → Completion → Home; add Smart Animate where helpful.	This mirrors the Activity/Fragment navigation graph; helps you think through back stack and Up navigation.
+13	Android mapping page	Create a dedicated “Android mapping” page: diagram showing Activities/Fragments, RecyclerView, Adapter, ViewHolder, and data models (Deck, Card, Session, Streak).	Reuse your RecyclerView tuning notes: model, dataset, item layout XML, ViewHolder, Adapter, LayoutManager, and Activity wiring.
+​
+​
+14	Accessibility & polish	Add high‑contrast variant for key frames, increase font sizes, confirm touch sizes; refine colors and motion timings for calm, predictable transitions.	Align with Material spacing/density guidance so it feels native and accessible on Android.
+15	Story playthrough & export	Run a narrative walkthrough (“Child opens app, chooses deck, plays, takes break or finishes”), fix any confusing steps, export key frames for sharing.	Gives you a testable prototype for parents, kids, or stakeholders; also a reference when you start implementing views and navigation.
