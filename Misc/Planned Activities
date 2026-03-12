@@ -1,0 +1,27 @@
+Today (Day 1 – planning)
+Create docs/weekly-plan.md (or similar) in the repo.
+Paste in the plan for the next 6 days (see below).
+
+Day 2 – README + goals
+Task: Improve README.md: 3–5 bullet points on what the prototype is, who it’s for, and main features.
+Commit: docs: clarify project goals in README.
+
+Day 3 – Requirements
+Task: Create or extend docs/requirements.md with 5–10 user stories or requirements. - done with with Requirements Document
+Commit: docs: add user requirements.
+
+Day 4 – Feature list & priorities
+Task: Make a simple feature list in docs/features.md and mark each as “MVP” or “later”.
+Commit: docs: list MVP and future features.
+
+Day 5 – Screens / flows sketch
+Task: Describe main screens and flows in docs/flows.md (Home, Detail, Settings, etc.; just bullets or a simple numbered flow).
+Commit: docs: outline core user flows.
+
+Day 6 – Data / models
+Task: Write basic data models in docs/models.md (e.g. what fields a “Task”, “User”, or “Item” has).
+Commit: docs: define core data models.
+
+Day 7 – Next‑week prep
+Task: Add docs/next-week-plan.md with 3–5 concrete tasks you’ll do next week (can start including code or design work).​
+Commit: docs: draft next week’s plan.
